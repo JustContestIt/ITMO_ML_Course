@@ -13,7 +13,9 @@ from sklearn.metrics import f1_score
 if __name__ == "__main__":
     df = pd.read_csv('diabetes.csv')
     task_data = df.head(670)
-    print(len(task_data[task_data['Outcome'] == 0]))
+    x = int(input("Введите номер класса (0 или 1) -> "))
+    print("Первый ответ: " + str(len(task_data[task_data['Outcome'] == x])) + "\n")
+    print("")
     train = task_data.head(int(len(task_data) * 0.8))
     test = task_data.tail(int(len(task_data) * 0.2))
     features = list(train.columns[:8])

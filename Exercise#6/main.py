@@ -23,7 +23,7 @@ print(Probability)
 Y_true = (test_data['Y'].to_frame().T).values.ravel()
 fpr, tpr, _ = metrics.roc_curve(Y_true, Y_pred)
 Y_pred_probs_class_1 = Y_pred_probs[:, 1]
-print("\nПросто по названию конфеты выпиши нужное значение из таблицы. "
+print("\nПервые два ответа - это просто по названию конфеты выпиши нужное значение из таблицы. "
       "Столбец 0 - вероятность нуля. "
       "Столбец 1 - вероятность единицы")
 print("Третий ответ: " + str(metrics.recall_score(Y_true, Y_pred)))
