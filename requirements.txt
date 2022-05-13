@@ -7,3 +7,4 @@ opencv-python~=4.5.5.64
 ipython~=8.2.0
 imutils~=0.5.4
 graphviz~=0.19.2
+KMeans~=
